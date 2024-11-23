@@ -1,0 +1,21 @@
+/* In your CSS file */
+@media (max-width: 768px) {
+    .bg-dark {
+        width: 0;
+        /* Hide sidebar on smaller screens */
+    }
+
+    .bg-dark.collapsed {
+        width: 100%;
+        /* Full width on collapse for mobile */
+    }
+
+    .bg-dark .btn {
+        display: none;
+        /* Hide the toggle button on mobile screens */
+    }
+         .bg-dark .react-icons {
+             font-size: 20px;
+             /* Adjust icon size for smaller screens */
+         }
+}
