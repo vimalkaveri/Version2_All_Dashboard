@@ -6,7 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Sitetable from "../pages/Sitetable";
 import Siteheatmap from "../pages/Siteheatmap";
 import Sitemap from "../pages/Sitemap";
-import {  FaSearch} from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { CgMenuRight } from "react-icons/cg";
 import { Bar } from "react-chartjs-2";
 import {
@@ -27,7 +27,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const Dashboard = ( ) => {
+const Dashboard = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [view, setView] = useState("table"); // Default view is table
 

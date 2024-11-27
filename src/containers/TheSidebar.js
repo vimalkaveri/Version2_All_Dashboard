@@ -3,7 +3,6 @@ import {
   CSidebar,
   CSidebarNav,
   CNavItem,
-  CNavLink,
   CImage,
 } from "@coreui/react";
 import {
@@ -47,10 +46,10 @@ const TheSidebar = ({ isCollapsed, toggleSidebar }) => {
       <CSidebarNav className="p-2">
         {/* Links */}
         {[
-          { path: "/dashboard", icon: <FaHome />, label: "Dashboard" },
-          { path: "/device", icon: <TbDeviceHeartMonitor />, label: "Device" },
-          { path: "/user", icon: <FaUser />, label: "User" },
-          { path: "/help", icon: <FaQuestionCircle />, label: "Help" },
+          { path: "/admin", icon: <FaHome />, label: "Admin" },
+          { path: "/client", icon: <TbDeviceHeartMonitor />, label: "Client" },
+          { path: "/organization", icon: <FaUser />, label: "Organization" },
+          { path: "/site", icon: <FaQuestionCircle />, label: "Site" },
         ].map((item, index) => (
           <CNavItem key={index}>
             <NavLink

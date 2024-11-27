@@ -4,10 +4,10 @@ import { Container } from "react-bootstrap";
 import TheSidebar from "./TheSidebar";
 import TheHeader from "./TheHeader";
 import TheFooter from "./TheFooter";
-import Dashboard from "../Sidebarpages/Dashboard";
-import Device from "../Sidebarpages/Device";
-import Help from "../Sidebarpages/Help";
-import User from "../Sidebarpages/User";
+import Admin from "../Sidebarpages/Admin";
+import Client from "../Sidebarpages/Client";
+import Organization from "../Sidebarpages/Organization";
+import Site from "../Sidebarpages/Site";
 
 const AppLayout = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -36,11 +36,11 @@ const AppLayout = () => {
         >
           <Container fluid>
             <Routes>
-              <Route index element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/device" element={<Device />} />
-              <Route path="/user" element={<User />} />
-              <Route path="/help" element={<Help />} />
+              <Route index element={<Admin />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/client" element={<Client />} />
+              <Route path="/organization" element={<Organization />} />
+              <Route path="/site" element={<Site />} />
             </Routes>
           </Container>
         </div>
