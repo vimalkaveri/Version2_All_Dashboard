@@ -274,8 +274,10 @@ const menuOptions = [
                       <div
                         key={index}
                         onClick={() => {
-                          option.action(); // Execute the option's action
-                          toggleMenu(); // Close the menu
+                          // Hide the menu first
+                          toggleMenu();
+                          // Ensure the option action runs after menu is hidden
+                          setTimeout(() => option.action(), 0);
                         }}
                         style={{
                           padding: "5px 20px",
@@ -1015,14 +1017,22 @@ const menuOptions = [
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col md={4}>
-          <h3>Recent User</h3>
-          <ul>
-            <li>User Activity 1</li>
-            <li>User Activity 2</li>
-            <li>User Activity 3</li>
-          </ul>
+      <Row>
+        <Col md={4} className="gx-2 gy-2">
+          <Card
+            style={{
+              minHeight: "300px",
+              flexDirection: "column",
+            }}
+          >
+            <Card.Header
+              className="d-flex justify-content-between align-items-center"
+              style={{ fontWeight: 600, fontSize: "13px" }}
+            >
+              <span>Recent User</span>
+            </Card.Header>
+            <Card.Body></Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>
